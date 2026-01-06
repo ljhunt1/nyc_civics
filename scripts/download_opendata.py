@@ -9,7 +9,7 @@ from pathlib import Path
 
 load_dotenv()
 
-DATA_DIR = Path(__file__).parent / "data"
+DATA_DIR = Path(__file__).parent.parent / "data"
 BASE_URL = "https://data.cityofnewyork.us"
 
 # Auth credentials
