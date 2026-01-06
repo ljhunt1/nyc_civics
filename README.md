@@ -10,21 +10,6 @@ OPENDATA_API_KEY_ID=...
 OPENDATA_API_KEY_SECRET=...
 ```
 
-### TODO
-
-1. Create an OpenData account, store key locally somewhere safe
-2. Create scripts for hitting SODA3 apis
-
-### Notes for myself on the OpenData APIs
-
-- Provided by Socrata (business to gov tech company), which was bought by Tyler technologies (-> Data and Insights division of Tyler)
-- SODA3 APIs https://support.socrata.com/hc/en-us/articles/34730618169623-SODA3-API, query with SoQL
-
-### Misc Thoughts
-
-- I actually really like "software engineering" not just "LLM learning"
-- It is really nice to do this solo lol
-
 ## Notes on data
 
 - Evictions
@@ -36,14 +21,8 @@ OPENDATA_API_KEY_SECRET=...
     - Eviction rate: (# executed evictions / # renter occupied-homes). So, for example one might say "the bronx has 1 eviction per 79 renter-occupied units".
     - For the denominator of our rate, we used the number of occupied renting households in each area. Used ACS 1-year estimates for boroughs, 5-year estimates for zips if used (1-year doesn't have that granularity). Eviction lab supplements with ESRI Business Analyst demographic estimates, we don't. 2020 and 2025 are missing, so we use 2019 and 2024 respectively
     - City council uses a different denominator https://council.nyc.gov/data/evictions/#map-guide https://github.com/NewYorkCityCouncil/PA_evictions - they use PLUTO data which is ALL residential units (renter occupied + owner occupied + vacant). To give a sense, units are roughly 2/3 renter occupied, 1/3 owner occupied, 1-2% vacant, so our numbers are 60% higher
-- Other sources of data vis
-  https://evictionlab.org/eviction-tracking/new-york-ny/
-  https://comptroller.nyc.gov/reports/audit-report-on-the-new-york-city-housing-authoritys-eviction-processes/
-  https://evictionlab.org/map
-  https://evictionlab.org/in-the-most-expensive-city-in-the-country-evictions-remain-lower-than-before-covid-19/
-
-- Housing units (by month/quarter/year, by zipcode/borough):
-
-* Possible source: DCP Housing Database? https://data.cityofnewyork.us/Housing-Development/Housing-Database/6umk-irkx/about_data
-* Possible source: Pluto? https://data.cityofnewyork.us/City-Government/Primary-Land-Use-Tax-Lot-Output-PLUTO-/64uk-42ks
-* Possible source: annual census, NYC Housing and Vacancy Survey? https://www.nyc.gov/assets/hpd/downloads/pdfs/about/2023-nychvs-selected-initial-findings.pdf
+    - Here are some other places which visualize eviction data in superior ways
+      https://evictionlab.org/eviction-tracking/new-york-ny/
+      https://comptroller.nyc.gov/reports/audit-report-on-the-new-york-city-housing-authoritys-eviction-processes/
+      https://evictionlab.org/map
+      https://evictionlab.org/in-the-most-expensive-city-in-the-country-evictions-remain-lower-than-before-covid-19/
