@@ -25,7 +25,7 @@ TENURE_VARS = {
 }
 
 
-def download_acs_tenure(year: int = 2023):
+def download_acs_housing_tenure(year: int = 2023):
     """Download ACS 1-year tenure data for NYC boroughs.
 
     Args:
@@ -71,7 +71,7 @@ def download_acs_tenure(year: int = 2023):
     df = df[["year", "borough", "NAME", "state", "county"] + list(TENURE_VARS.values())]
 
     # Save
-    output_path = DATA_DIR / f"acs_tenure_{year}.csv"
+    output_path = DATA_DIR / f"acs_housing_tenure_{year}.csv"
     df.to_csv(output_path, index=False)
 
     print(f"Saved to {output_path}")
@@ -91,7 +91,7 @@ def main():
     )
     args = parser.parse_args()
 
-    download_acs_tenure(year=args.year)
+    download_acs_housing_tenure(year=args.year)
 
 
 if __name__ == "__main__":
